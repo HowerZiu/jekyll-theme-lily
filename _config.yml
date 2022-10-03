@@ -1,0 +1,10 @@
+title: Lily theme
+description: A fresh theme for Jekyll based on Beercss.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-lily
+
+lily:
+  beercss:
+    css_url:
+    js_url:

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div id="post-info">
+    <article>
+        <details>
+            <summary class="none">
+                <div class="row">
+                    <i title="Date">date_range</i>
+                    <noscript>{{ page.date | date: "%d/%m/%Y %H:%M %Z" }}</noscript>
+                    <script>
+                        var datecz = new Date('{{ page.date }}');
+                        document.write(datecz);
+                    </script>
+                    <div class="max"></div>
+                    <i title="Show extra info">arrow_drop_down</i>
+                </div>
+            </summary>
+            <div class="medium-divider"></div>
+            <div class="row">
+                <i title="Categories">sort</i>
+                {% for cat in page.categories %}
+                {% capture test %}{{ cat | slice: 0 }}{% endcapture %}
+                {% capture testup %}{{ cat | slice: 0 | upcase }}{% endcapture %}
+                <a class="chip round">{{ cat }}</a>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <i title="Tags">label</i>
+                {% for tag in page.tags %}
+                {% capture test %}{{ tag | slice: 0 }}{% endcapture %}
+                {% capture testup %}{{ tag | slice: 0 | upcase }}{% endcapture %}
+                <a class="chip primary right-round">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        </details>
+    </article>
+</div>
+<div class="large-divider"></div>
+<div id="post_content">
+{{ content }}
+</div>

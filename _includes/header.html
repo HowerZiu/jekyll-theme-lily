@@ -1,0 +1,23 @@
+<header class="responsive fixed lily-translucent-bar">
+    <nav>
+        {% if page.hide_title %}
+        <h5 class="max lily-bar-text" ondblclick="body.scrollTop=document.documentElement.scrollTop=0;"></h5>
+        {% else %}
+        {% if page.hide_excerpt %}
+        <h5 class="max lily-bar-text" ondblclick="body.scrollTop=document.documentElement.scrollTop=0;">{{ page.title | default: site.title | default: site.github.repository_name }}</h5>
+        {% else %}
+        {% if page.layout=="post" %}
+        <h5 class="max lily-bar-text" ondblclick="body.scrollTop=document.documentElement.scrollTop=0;">{{ page.title | default: site.title | default: site.github.repository_name }}</h5>
+        {% else %}
+        <div class="max lily-bar-text" ondblclick="body.scrollTop=document.documentElement.scrollTop=0;">
+            <h6 class="lily-bar-text">{{ page.title | default: site.title | default: site.github.repository_name }}</h6>
+            <p class="lily-bar-text">{{ page.excerpt | default: site.description | default: site.github.project_tagline }}</p>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endif %}
+        <button class="circle transparent" title="Light mode switch" onclick="changeLilyMode()">
+            <i>light_mode</i>
+        </button>
+    </nav>
+</header>

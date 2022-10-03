@@ -1,0 +1,25 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% if page.title %}
+        {{ page.title | escape }}
+        {% else %}
+        {{ site.title | escape }}
+        {% endif %}
+    </title>
+    {% if site.lily.beercss.css_url %}
+    <link rel="stylesheet" type="text/css" href="{{ site.lily.beercss.css_url }}">
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/beercss@2.2.11/dist/cdn/beer.min.css">
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% if site.lily.beercss.js_url %}
+    <script type="text/javascript" src="{{ site.lily.beercss.js_url }}"></script>
+    {% else %}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/beercss@2.2.11/dist/cdn/beer.min.js"></script>
+    {% endif %}
+    {% seo %}
+    <script type="text/javascript" src="{{ "/assets/js/lily.js" | relative_url }}"></script>
+    {% include head-custom.html %}
+</head>

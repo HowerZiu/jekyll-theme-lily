@@ -1,0 +1,8 @@
+<footer>
+    {% if site.github.is_project_page %}
+    {{ site.title | default: site.github.repository_name }} is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a><br>
+    <div class="small-divider"></div>
+    {% endif %}
+    <p>{{ site.description }}</p>
+    <p class="footer-copyright">&#xA9; 2022 {{site.title}}. Powered by <a href="https://github.com/HowerZiu/lily">Lily</a>.</p>
+</footer>
