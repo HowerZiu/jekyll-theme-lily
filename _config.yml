@@ -3,6 +3,7 @@ description: A fresh theme for Jekyll based on Beercss.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-lily
+remote-theme: HowerZiu/jekyll-theme-lily
 
 lily:
   beercss:
