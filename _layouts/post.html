@@ -9,7 +9,7 @@ layout: default
                     <i title="Date">date_range</i>
                     <noscript>{{ page.date | date: "%d/%m/%Y %H:%M %Z" }}</noscript>
                     <script>
-                        var datecz = new Date('{{ page.date }}');
+                        var datecz = new Date('{{ page.date | date: "%FT%T%z" }}');
                         document.write(datecz);
                     </script>
                     <div class="max"></div>
