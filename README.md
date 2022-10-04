@@ -1,10 +1,8 @@
 # jekyll-theme-lily
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-lily.svg)](https://badge.fury.io/rb/jekyll-theme-lily) [![Gem](https://img.shields.io/gem/dt/jekyll-theme-lily.svg)](https://img.shields.io/gem/dt/jekyll-theme-lily.svg)
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
+*Lily is a fresh Jekyll theme based on [Beercss](https://www.beercss.com/). You can [preview the theme to see what it looks like](https://howerziu.github.io/jekyll-theme-lily), or [directly use it](#usage).*
 
 
 ## Installation
@@ -31,7 +29,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+To directly use the Lily theme:
+
+1. Add the following to your site's `_config.yml`:
+
+    ```yml
+    remote_theme: HowerZiu/jekyll-theme-lily@1.3.2.2.11
+    plugins:
+    - jekyll-remote-theme # add this line to the plugins list if you already have one
+    ```
+
+2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
+
+    ```ruby
+    gem "github-pages", group: :jekyll_plugins
+    ```
 
 ## Contributing
 

@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-lily"
-  spec.version       = "1.2.2.2.11"
+  spec.version       = "1.3.2.2.11"
   spec.authors       = ["HowerZiu"]
   spec.email         = ["howerziu@yeah.net"]
 
-  spec.summary       = "A fresh theme for Jekyll."
+  spec.summary       = "A fresh Jekyll theme."
   spec.homepage      = "https://github.com/HowerZiu/jekyll-theme-lily"
   spec.license       = "MIT"
 
