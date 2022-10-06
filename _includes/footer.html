@@ -6,3 +6,17 @@
     <p>{{ site.description }}</p>
     <p class="footer-copyright">&#xA9; 2022 {{site.title}}. Powered by <a href="https://github.com/HowerZiu/jekyll-theme-lily">Lily</a>.</p>
 </footer>
+{% for js in layout.js %}
+{% if js contains "//" %}
+<script src="{{js}}"></script>
+{% else %}
+<script src="{{site.baseurl}}/assets/js/{{js}}"></script>
+{% endif %}
+{% endfor %}
+{% for js in page.js %}
+{% if js contains "//" %}
+<script src="{{js}}"></script>
+{% else %}
+<script src="{{site.baseurl}}/assets/js/{{js}}"></script>
+{% endif %}
+{% endfor %}
