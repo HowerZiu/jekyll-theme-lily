@@ -14,6 +14,20 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/beercss@2.2.11/dist/cdn/beer.min.css">
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% for css in layout.css %}
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %}
+    {% endfor %}
+    {% for css in page.css %}
+    {% if css contains "//" %}
+    <link rel="stylesheet" href="{{css}}">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
+    {% endif %}
+    {% endfor %}
     {% if site.lily.beercss.js_url %}
     <script type="text/javascript" src="{{ site.lily.beercss.js_url }}"></script>
     {% else %}
