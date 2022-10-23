@@ -34,5 +34,15 @@ function setLilyMode() {
     }
 }
 function changeLilyMode() {
-    var lily_mode=getLilyCookie('lily_mode'); if (lily_mode=='dark') lily_mode='light'; else lily_mode='dark'; setLilyCookie('lily_mode',lily_mode,180,'/'); setLilyMode();
+    var lily_mode=getLilyCookie('lily_mode');
+    if (lily_mode=='dark')
+        lily_mode='light';
+    else
+        lily_mode='dark';
+    setLilyCookie('lily_mode',lily_mode,180,'/');
+    setLilyMode();
+}
+function lilyScrollTop() {
+    var elm=document.body||document.documentElement;
+    elm.scrollIntoView({behavior:"smooth"});
 }
