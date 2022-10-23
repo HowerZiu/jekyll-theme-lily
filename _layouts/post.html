@@ -18,7 +18,7 @@ layout: default
             </summary>
             <div class="medium-divider"></div>
             <div class="row">
-                <i title="Categories">sort</i>
+                <i title="Categories">category</i>
                 {% for cat in page.categories %}
                 {% capture test %}{{ cat | slice: 0 }}{% endcapture %}
                 {% capture testup %}{{ cat | slice: 0 | upcase }}{% endcapture %}
@@ -26,7 +26,7 @@ layout: default
                 {% endfor %}
             </div>
             <div class="row">
-                <i title="Tags">label</i>
+                <i title="Tags">tag</i>
                 {% for tag in page.tags %}
                 {% capture test %}{{ tag | slice: 0 }}{% endcapture %}
                 {% capture testup %}{{ tag | slice: 0 | upcase }}{% endcapture %}
