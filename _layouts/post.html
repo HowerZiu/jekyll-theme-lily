@@ -7,11 +7,13 @@ layout: default
             <summary class="none">
                 <div class="row">
                     <i title="Date">date_range</i>
-                    <noscript>{{ page.date | date: "%d/%m/%Y %H:%M %Z" }}</noscript>
-                    <script>
-                        var datecz = new Date('{{ page.date | date: "%FT%T%z" }}');
-                        document.write(datecz);
-                    </script>
+                    <div class="lily-post-date">
+                        <noscript>{{ page.date | date: "%d/%m/%Y %H:%M %Z" }}</noscript>
+                        <script>
+                            var datecz = new Date('{{ page.date | date: "%FT%T%z" }}');
+                            document.write(datecz);
+                        </script>
+                    </div>
                     <div class="max"></div>
                     <i title="Show extra info">arrow_drop_down</i>
                 </div>
