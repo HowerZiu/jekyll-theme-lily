@@ -21,16 +21,19 @@ function delLilyCookie(cname) {
 function setLilyMode() {
     body=document.body;
     var lily_mode=getLilyCookie("lily_mode");
+    var theme_color_meta=document.querySelector('meta[name="theme-color"]');
     if (lily_mode=="dark") {
         body.classList.remove("light");
         body.classList.add("dark");
         document.getElementById("body").classList.remove("lily-mode-light");
         document.getElementById("body").classList.add("lily-mode-dark");
+        theme_color_meta.setAttribute("content","#343e8f");
     } else {
         body.classList.remove("dark");
         body.classList.add("light");
         document.getElementById("body").classList.remove("lily-mode-dark");
         document.getElementById("body").classList.add("lily-mode-light");
+        theme_color_meta.setAttribute("content","#dee0ff");
     }
 }
 function changeLilyMode() {
