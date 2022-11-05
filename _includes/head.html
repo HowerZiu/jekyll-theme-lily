@@ -35,5 +35,11 @@
     {% endif %}
     {% seo %}
     <script type="text/javascript" src="{{ "/assets/js/lily.js" | relative_url }}"></script>
+    <script type="text/javascript">
+        window.onpageshow=function(e) {
+            if (e.persisted)
+                setLilyMode();
+        }
+    </script>
     {% include head-custom.html %}
 </head>
