@@ -43,4 +43,18 @@
         }
     </script>
     {% include head-custom.html %}
+    {% for js in layout.js %}
+    {% if js contains "//" %}
+    <script src="{{js}}"></script>
+    {% else %}
+    <script src="{{site.baseurl}}/assets/js/{{js}}"></script>
+    {% endif %}
+    {% endfor %}
+    {% for js in page.js %}
+    {% if js contains "//" %}
+    <script src="{{js}}"></script>
+    {% else %}
+    <script src="{{site.baseurl}}/assets/js/{{js}}"></script>
+    {% endif %}
+    {% endfor %}
 </head>
