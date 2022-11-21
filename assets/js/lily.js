@@ -47,5 +47,5 @@ function changeLilyMode() {
 }
 function lilyScrollTop() {
     var elm=document.body||document.documentElement;
-    elm.scrollIntoView({behavior:"smooth"});
+    elm.scrollIntoView();
 }
