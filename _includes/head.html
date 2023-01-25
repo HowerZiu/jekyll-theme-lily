@@ -12,7 +12,7 @@
     {% if site.lily.beercss.css_url %}
     <link rel="stylesheet" type="text/css" href="{{ site.lily.beercss.css_url }}">
     {% else %}
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/beercss@2.3.0/dist/cdn/beer.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.css">
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ "/assets/css/style.css" | relative_url }}">
     {% for css in layout.css %}
@@ -32,7 +32,7 @@
     {% if site.lily.beercss.js_url %}
     <script type="text/javascript" src="{{ site.lily.beercss.js_url }}"></script>
     {% else %}
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/beercss@2.3.0/dist/cdn/beer.min.js"></script>
+    <script type="module" src="//cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.js"></script>
     {% endif %}
     {% seo %}
     <script type="text/javascript" src="{{ "/assets/js/lily.js" | relative_url }}"></script>
