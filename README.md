@@ -34,7 +34,7 @@ To directly use the Lily theme:
 1. Add the following to your site's `_config.yml`:
 
     ```yml
-    remote_theme: HowerZiu/jekyll-theme-lily@2.2.2.3.0
+    remote_theme: HowerZiu/jekyll-theme-lily@2.2.3.0.8
     plugins:
     - jekyll-remote-theme # add this line to the plugins list if you already have one
     ```
