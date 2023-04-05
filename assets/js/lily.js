@@ -44,6 +44,10 @@ function changeLilyMode() {
         lily_mode='dark';
     setLilyCookie('lily_mode',lily_mode,180,'/');
     setLilyMode();
+    document.body.classList.add("transition");
+    window.setTimeout(()=>{
+        document.body.classList.remove("transition");
+    },500);
 }
 function lilyScrollTop() {
     var elm=document.body||document.documentElement;
