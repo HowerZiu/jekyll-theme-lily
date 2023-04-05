@@ -1,22 +1,22 @@
 <header class="responsive fixed lily-translucent-bar">
     <nav>
         {% if page.hide_title %}
-        <h5 class="max lily-bar-text" ondblclick="lilyScrollTop()"></h5>
+        <h5 class="max lily-bar-text" ondblclick="scrollToTop()"></h5>
         {% else %}
         {% if page.hide_excerpt %}
-        <h5 class="max lily-bar-text" ondblclick="lilyScrollTop()">{{ page.title | default: site.title | default: site.github.repository_name }}</h5>
+        <h5 class="max lily-bar-text" ondblclick="scrollToTop()">{{ page.title | default: site.title | default: site.github.repository_name }}</h5>
         {% else %}
         {% if page.layout=="post" %}
-        <h5 class="max lily-bar-text" ondblclick="lilyScrollTop()">{{ page.title | default: site.title | default: site.github.repository_name }}</h5>
+        <h5 class="max lily-bar-text" ondblclick="scrollToTop()">{{ page.title | default: site.title | default: site.github.repository_name }}</h5>
         {% else %}
-        <div class="max lily-bar-text" ondblclick="lilyScrollTop()">
+        <div class="max lily-bar-text" ondblclick="scrollToTop()">
             <h6 class="lily-bar-text">{{ page.title | default: site.title | default: site.github.repository_name }}</h6>
             <p class="lily-bar-text">{{ page.excerpt | default: site.description | default: site.github.project_tagline }}</p>
         </div>
         {% endif %}
         {% endif %}
         {% endif %}
-        <button class="circle transparent" title="Light mode switch" onclick="changeLilyMode()">
+        <button class="circle transparent" title="Light mode switch" onclick="changeLightMode()">
             <i>light_mode</i>
         </button>
     </nav>
