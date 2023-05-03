@@ -5,6 +5,11 @@
 *Lily is a fresh Jekyll theme based on [Beercss](https://www.beercss.com/). You can [preview the theme to see what it looks like](https://howerziu.github.io/jekyll-theme-lily), or [directly use it](#usage).*
 
 
+**BREAKING CHANGES**
+
+* Due to breaking changes of Beercss 3.0, you need to divide rem unit by 16 and multiply px unit by 16 if you have custom css with rem or px units and update jekyll-theme-lily from 2.2 or below to 3.0 or above ( [view details](https://github.com/beercss/beercss/releases/tag/v3.0.0) )
+
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
