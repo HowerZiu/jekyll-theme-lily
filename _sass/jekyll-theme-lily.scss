@@ -27,6 +27,9 @@ body.transition {
 }
 
 .lily-translucent-bar {
+    ---blur: .032rem;
+    -webkit-backdrop-filter: blur(var(---blur));
+    backdrop-filter: blur(var(---blur));
     &:after {
         content: "";
         position: absolute;
